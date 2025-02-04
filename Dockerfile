@@ -1,3 +1,4 @@
 FROM openjdk:17-jdk-alpine AS build
-FROM openjdk:17-jdk-slim
+EXPOSE 8183
+ADD target/department.jar department.jar
 ENTRYPOINT ["java","-jar","department.jar"]
